@@ -1,52 +1,18 @@
-document.addEventListener('DOMContentLoaded', function () {
-    const messageArea = document.querySelector('.message-area');
-    const inputField = document.querySelector('.message-input');
-    const sendButton = document.querySelector('.send-button');
-
-    // Function to simulate receiving new messages
-    function receiveMessage() {
-        const messages = [
-            'Hello! How are you?',
-            'What are you working on?',
-            'Let\'s catch up soon!',
-            'Check out this cool feature!',
-            'Did you see the latest update?'
-        ];
-        const randomMessage = messages[Math.floor(Math.random() * messages.length)];
-        const newMessage = document.createElement('div');
-        newMessage.className = 'message';
-        newMessage.textContent = randomMessage;
-        messageArea.appendChild(newMessage);
-        messageArea.scrollTop = messageArea.scrollHeight; // Auto-scroll to bottom
+function runPython() {
+    var code = document.getElementById('code').value;
+    var output = document.getElementById('output');
+    try {
+        // Using Brython to execute the Python code
+        __BRYTHON__.run_script(code);
+    } catch (e) {
+        output.innerHTML = "Error: " + e;
     }
+}
 
-    // Simulate new messages every 10 seconds
-    setInterval(receiveMessage, 10000);
+function clearCode() {
+    document.getElementById('code').value = '';
+    document.getElementById('output').innerHTML = '';
+}
 
-    // Handle sending messages
-    sendButton.addEventListener('click', function () {
-        const messageText = inputField.value.trim();
-        if (messageText) {
-            const newMessage = document.createElement('div');
-            newMessage.className = 'message user-message';
-            newMessage.textContent = messageText;
-            messageArea.appendChild(newMessage);
-            inputField.value = ''; // Clear input field
-            messageArea.scrollTop = messageArea.scrollHeight; // Auto-scroll to bottom
-        }
-    });
-
-    // Dropdown functionality
-    const dropdownToggle = document.querySelector('.dropdown-toggle');
-    const dropdownMenu = document.querySelector('.dropdown-menu');
-
-    dropdownToggle.addEventListener('click', function () {
-        dropdownMenu.classList.toggle('show');
-    });
-
-    document.addEventListener('click', function (event) {
-        if (!dropdownToggle.contains(event.target) && !dropdownMenu.contains(event.target)) {
-            dropdownMenu.classList.remove('show');
-        }
-    });
-});
+document.getElementById('run-button').addEventListener('click', runPython);
+document.getElementById('clear-button').addEventListener('click', clearCode);
