@@ -3,48 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Discord-like Page</title>
+    <title>Python Interpreter</title>
     <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/brython@3.11.1/brython.min.js"></script>
+    <script type="text/javascript" src="scripts.js" defer></script>
 </head>
-<body>
-    <header>
-        <div class="logo">MyDiscordPage</div>
-        <nav>
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#projects">Projects</a>
-        </nav>
-    </header>
+<body onload="brython()">
     <div class="container">
-        <aside class="sidebar">
-            <div class="user-info">
-                <img src="https://via.placeholder.com/40" alt="User Avatar" class="user-avatar">
-                <div class="user-name">Faiz</div>
-                <div class="user-status">Online</div>
-            </div>
-            <div class="dropdown">
-                <button class="dropdown-toggle">Channels</button>
-                <div class="dropdown-menu">
-                    <a href="#channel1">Channel 1</a>
-                    <a href="#channel2">Channel 2</a>
-                    <a href="#channel3">Channel 3</a>
-                </div>
-            </div>
-            <a href="#settings">Settings</a>
-        </aside>
-        <main class="content">
-            <div class="chat-container">
-                <div class="message-area"></div>
-                <div class="chat-input">
-                    <input type="text" class="message-input" placeholder="Type a message...">
-                    <button class="send-button">Send</button>
-                </div>
-            </div>
-        </main>
+        <h1>Python Interpreter</h1>
+        <textarea id="code" placeholder="Type your Python code here..."></textarea>
+        <div class="controls">
+            <button id="run-button">Run</button>
+            <button id="clear-button">Clear</button>
+        </div>
+        <div id="output" class="output"></div>
     </div>
-    <footer>
-        <p>© 2024 MyDiscordPage</p>
-    </footer>
-    <script src="script.js"></script>
 </body>
 </html>
