@@ -1,0 +1,7 @@
+{
+    "title": "Intérprete de Python",
+    "placeholder": "Escribe tu código Python aquí...",
+    "run_button": "Ejecutar",
+    "clear_button": "Borrar",
+    "error": "Error:"
+}
