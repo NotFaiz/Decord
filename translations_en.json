@@ -1,7 +1,0 @@
-{
-    "title": "Python Interpreter",
-    "placeholder": "Type your Python code here...",
-    "run_button": "Run",
-    "clear_button": "Clear",
-    "error": "Error:"
-}
