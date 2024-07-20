@@ -3,18 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Python Interpreter</title>
+    <title data-translate="title">Python Interpreter</title>
     <link rel="stylesheet" href="styles.css">
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/brython@3.11.1/brython.min.js"></script>
+    <script type="text/javascript" src="translations.js" defer></script>
     <script type="text/javascript" src="scripts.js" defer></script>
 </head>
-<body onload="brython()">
+<body onload="initializePage()">
     <div class="container">
-        <h1>Python Interpreter</h1>
-        <textarea id="code" placeholder="Type your Python code here..."></textarea>
+        <h1 data-translate="title">Python Interpreter</h1>
+        <textarea id="code" placeholder="" data-translate="placeholder"></textarea>
         <div class="controls">
-            <button id="run-button">Run</button>
-            <button id="clear-button">Clear</button>
+            <button id="run-button" data-translate="run_button">Run</button>
+            <button id="clear-button" data-translate="clear_button">Clear</button>
         </div>
         <div id="output" class="output"></div>
     </div>
