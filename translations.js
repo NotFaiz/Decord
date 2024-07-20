@@ -20,9 +20,12 @@ function applyTranslations(translations) {
 function initializePage() {
     const userLang = navigator.language || navigator.userLanguage;
     const lang = userLang.split('-')[0]; // e.g., 'en' from 'en-US'
-    
+
     loadTranslations(lang).then(translations => {
         applyTranslations(translations);
         brython(); // Initialize Brython after translations are applied
+    }).catch(error => {
+        console.error("Error loading translations:", error);
+        brython(); // Initialize Brython even if translations fail
     });
 }
