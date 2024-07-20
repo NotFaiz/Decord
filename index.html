@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GitHub Page with Discord-like UI</title>
+    <title>My Discord-like Page</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <div class="logo">MyGitHubPage</div>
+        <div class="logo">MyDiscordPage</div>
         <nav>
             <a href="#home">Home</a>
             <a href="#about">About</a>
@@ -17,6 +17,11 @@
     </header>
     <div class="container">
         <aside class="sidebar">
+            <div class="user-info">
+                <img src="https://via.placeholder.com/40" alt="User Avatar" class="user-avatar">
+                <div class="user-name">Faiz</div>
+                <div class="user-status">Online</div>
+            </div>
             <div class="dropdown">
                 <button class="dropdown-toggle">Channels</button>
                 <div class="dropdown-menu">
@@ -26,14 +31,6 @@
                 </div>
             </div>
             <a href="#settings">Settings</a>
-            <div class="settings-section">
-                <h3>Profile</h3>
-                <label for="username">Username:</label>
-                <input type="text" id="username">
-                <label for="status">Status:</label>
-                <input type="text" id="status">
-                <button class="save-settings">Save</button>
-            </div>
         </aside>
         <main class="content">
             <div class="chat-container">
@@ -46,7 +43,7 @@
         </main>
     </div>
     <footer>
-        <p>© 2024 MyGitHubPage</p>
+        <p>© 2024 MyDiscordPage</p>
     </footer>
     <script src="script.js"></script>
 </body>
