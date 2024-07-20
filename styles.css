@@ -72,4 +72,5 @@ button:active {
     border: 1px solid #c8e6c9;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     min-height: 100px;
+    white-space: pre-wrap; /* Preserve formatting */
 }
