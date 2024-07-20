@@ -29,6 +29,7 @@ header nav a {
     color: #dcddde;
     margin: 0 10px;
     text-decoration: none;
+    font-weight: 600;
 }
 
 .container {
