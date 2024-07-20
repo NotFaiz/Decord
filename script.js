@@ -5,15 +5,23 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Function to simulate receiving new messages
     function receiveMessage() {
+        const messages = [
+            'Hello! How are you?',
+            'What are you working on?',
+            'Let\'s catch up soon!',
+            'Check out this cool feature!',
+            'Did you see the latest update?'
+        ];
+        const randomMessage = messages[Math.floor(Math.random() * messages.length)];
         const newMessage = document.createElement('div');
         newMessage.className = 'message';
-        newMessage.textContent = `New message at ${new Date().toLocaleTimeString()}`;
+        newMessage.textContent = randomMessage;
         messageArea.appendChild(newMessage);
         messageArea.scrollTop = messageArea.scrollHeight; // Auto-scroll to bottom
     }
 
-    // Simulate new messages every 5 seconds
-    setInterval(receiveMessage, 5000);
+    // Simulate new messages every 10 seconds
+    setInterval(receiveMessage, 10000);
 
     // Handle sending messages
     sendButton.addEventListener('click', function () {
