@@ -2,11 +2,12 @@ function runPython() {
     var code = document.getElementById('code').value;
     var output = document.getElementById('output');
     output.innerHTML = ''; // Clear previous output
+
     try {
-        // Use Brython to execute Python code
+        // Execute Python code with Brython
         __BRYTHON__.run_script(code);
     } catch (e) {
-        output.innerHTML = "Error: " + e;
+        output.innerHTML = `Error: ${e.message}`;
     }
 }
 
